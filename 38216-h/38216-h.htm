@@ -1,0 +1,1669 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.1//EN'
+  'http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Fiori d'arancio</title>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg common docutils stylesheet.
+
+  This stylesheet contains styles common to HTML and EPUB.  Put styles
+  that are specific to HTML and EPUB into their relative stylesheets.
+
+  :Author: Marcello Perathoner (webmaster@gutenberg.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  This stylesheet is based on:
+
+  :Author: David Goodger (goodger@python.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  Default cascading style sheet for the HTML output of Docutils.
+
+  */
+
+  /* ADE 1.7.2 chokes on !important and throws all css out. */
+
+  /* FONTS */
+
+  .italics    { font-style: italic }
+  .bold       { font-weight: bold }
+  .small-caps { }
+  .gesperrt   { }
+  .antiqua    { font-style: italic } /* what else can we do ? */
+  .monospaced { font-family: monospace }
+
+  .smaller    { font-size: smaller }
+  .larger     { font-size: larger }
+
+  .xx-small   { font-size: xx-small }
+  .x-small    { font-size: x-small }
+  .small      { font-size: small }
+  .medium     { font-size: medium }
+  .large      { font-size: large }
+  .x-large    { font-size: x-large }
+  .xx-large   { font-size: xx-large }
+
+  .text-transform-uppercase { text-transform: uppercase }
+  .text-transform-lowercase { text-transform: lowercase }
+  .text-transform-none      { text-transform: none }
+
+  .red        { color: red }
+  .green      { color: green }
+  .blue       { color: blue }
+  .yellow     { color: yellow }
+  .white      { color: white }
+  .gray       { color: gray }
+  .black      { color: black }
+
+  /* ALIGN */
+
+  .left       { text-align: left }
+  .center     { text-align: center }
+  .right      { text-align: right }
+  .justify    { text-align: justify }
+
+  /* LINE HEIGHT */
+
+  body        { line-height: 1.5 }
+  p           { margin: 1.5em 0 }
+
+  /* PAGINATION */
+
+  .title, .subtitle     { page-break-inside: avoid;
+                        page-break-after:  avoid }
+  .titlepage, 
+  #pg-header            { page-break-inside: avoid }
+
+  /* SECTIONS */
+
+  body         { text-align: justify }
+
+  p.noindent   { text-indent: 0 }
+
+  .boxed       { border: 1px solid black; padding: 1em }
+  .topic       { margin: 5% 0; border: 1px solid black; padding: 1em }
+  div.section  { clear: both }
+
+  div.line-block       { margin: 1.5em 0 }  /* same leading as p */
+  div.line-block.inner { margin: 0 0 0 10% }
+  div.line             { margin-left: 20%; text-indent: -20%; }
+  .line-block.noindent div.line { margin-left: 0; text-indent: 0; }
+
+  hr.docutils  { margin: 1.5em 40%; border: none; border-bottom: 1px solid black; }
+
+  .clearpage,
+  .cleardoublepage,
+  .vfill,
+  .vspace      { border: 0px solid white }
+
+  .title               { margin: 1.5em 0 }
+  .title.with-subtitle { margin-bottom: 0 }
+  .subtitle            { margin: 1.5em 0 }
+
+  /* ugly hack to give more specifity. 
+   because ADE chokes on !important */
+  .first.first { margin-top: 0 } 
+  .last.last   { margin-bottom: 0 }
+
+  /* header font style */
+  /* http://dev.w3.org/csswg/css3-fonts/#propdef-font-size */
+
+  h1.title                     { font-size: 200%; }  /* for book title only */
+  h2.title, p.subtitle.level-1 { font-size: 150%; margin-top: 4.5em;  margin-bottom: 2em }
+  h3.title, p.subtitle.level-2 { font-size: 120%; margin-top: 2.25em; margin-bottom: 1.25em }
+  h4.title, p.subtitle.level-3 { font-size: 100%; margin-top: 1.5em;  margin-bottom: 1.5em;  font-weight: bold; }
+  h5.title, p.subtitle.level-4 { font-size:  89%; margin-top: 1.87em; margin-bottom: 1.69em; font-style: italic; }
+  h6.title, p.subtitle.level-5 { font-size:  60%; margin-top: 3.5em;  margin-bottom: 2.5em }
+
+  /* title page */
+
+  h1.document-title, 
+  p.document-subtitle     { text-align: center }
+
+  div.titlepage,
+  #pg-header,
+  h1.document-title       { margin: 10% 0 5% 0 }
+  p.document-subtitle     { margin:  0  0 5% 0 }
+
+  /* PG header and footer */
+  #pg-machine-header { }
+  #pg-produced-by { }
+
+  li.toc-entry            { list-style-type: none }
+  ul.open li, ol.open li  { margin-bottom: 1.5em }
+
+  p.attribution           { margin-top: 0; text-align: right }
+
+  .example-rendered { 
+    margin: 1em 5%; border: 1px dotted red;  padding: 1em; background-color: #ffd }
+  .literal-block.example-source   { 
+    margin: 1em 5%; border: 1px dotted blue; padding: 1em; background-color: #eef }
+
+  /* DROPCAPS */
+
+  /* BLOCKQUOTES */
+
+  blockquote { margin: 1.5em 10% }
+
+  blockquote.epigraph { }
+
+  blockquote.highlights { }
+
+  div.local-contents { margin: 1.5em 10% }
+
+  div.abstract { margin: 3em 10% }
+  div.caption  { margin: 1.5em 10%; text-align: center; font-style: italic }
+  div.legend   { margin: 1.5em 10% }
+
+  .hidden { display: none }
+
+  .invisible { visibility: hidden; color: white } /* white: mozilla print bug */
+
+  a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+  dl.docutils dd {
+  margin-bottom: 0.5em }
+
+  div.figure { margin: 3em 0 }
+
+  img { max-width: 100% }
+
+  div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+  div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+  div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+  div.topic {
+  margin: 3em 0 }
+
+  ol.simple, ul.simple { margin: 1.5em 0 }
+
+  ol.toc-list,    ul.toc-list    { padding-left:  0  }
+  ol ol.toc-list, ul ul.toc-list { padding-left:  5% }
+
+  ol.arabic {
+  list-style: decimal }
+
+  ol.loweralpha {
+  list-style: lower-alpha }
+
+  ol.upperalpha {
+  list-style: upper-alpha }
+
+  ol.lowerroman {
+  list-style: lower-roman }
+
+  ol.upperroman {
+  list-style: upper-roman }
+
+  p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+  p.label {
+  white-space: nowrap }
+
+  p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+  p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+  p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  p.topic-title {
+  font-weight: bold }
+
+  pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+  .literal-block, .doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em; }
+
+  span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+  span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  span.interpreted {
+  font-family: sans-serif }
+
+  span.option {
+  white-space: nowrap }
+
+  span.pre {
+  white-space: pre }
+
+  span.problematic {
+  color: red }
+
+  span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 100% }
+
+  table { margin-top: 1.5em; margin-bottom: 1.5em; border-spacing: 0 }
+  table.align-left, table.align-right { margin-top: 0 }
+
+  table.table                { border-collapse: collapse; }
+  table.table thead          { border: 1px solid black; border-width: 2px 0 0 }
+  table.table tbody          { border: 1px solid black; border-width: 2px 0 }
+  table.table tr             { border: 1px solid black; border-width: 0 0 1px }
+  table.table tr.last        { border-width: 0 }
+  table.table td, 
+  table.table th             { padding: 1ex 1em; vertical-align: middle }
+
+  table.table.norules tr             { border-width: 0 }
+  table.table.norules td, 
+  table.table.norules th             { padding: 0.5ex 1em }
+  table.table.norules tr.first td    { padding-top: 1ex }
+  table.table.norules tr.last td     { padding-bottom: 1ex }
+  table.table.norules tr.first th    { padding-top: 1ex }
+  table.table.norules tr.last th     { padding-bottom: 1ex }
+
+
+  table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+  table.docinfo {
+  margin: 3em 4em }
+
+  table.docutils { }
+
+  tr.footnote.footnote td, tr.footnote.footnote th { 
+  padding: 0 0.5em 1.5em;
+  }
+
+  table.docutils td, table.docutils th,
+  table.docinfo td, table.docinfo th {
+  padding: 0 0.5em;
+  vertical-align: top }
+
+  table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+  /* used to remove borders from tables and images */
+  .borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+  table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "!important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 } /* FIXME: was !important */
+
+  h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+  h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+  ul.auto-toc {
+  list-style-type: none }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg HTML docutils stylesheet.
+
+  This stylesheet contains styles specific to HTML.
+  */
+
+  /* FONTS */
+
+  em                { font-style: normal }
+  strong            { font-weight: normal }
+  .small-caps       { font-variant: small-caps }
+  .gesperrt         { letter-spacing: 0.1em }
+
+  /* ALIGN */
+
+  .align-left       { clear: left;
+                    float: left;
+                    margin-right: 1em }
+
+  .align-right      { clear: right;
+                    float: right;
+                    margin-left: 1em }
+
+  .align-center     { margin-left: auto;
+                    margin-right: auto }
+
+  div.shrinkwrap    { display: table; }
+
+  /* SECTIONS */
+
+  body              { margin: 5% 10% 5% 10% }
+
+  /* compact list items containing just one p */
+  li p.pfirst       { margin-top: 0; margin-bottom: 0 } 
+
+  .first            { margin-top: 0 !important } 
+  .last             { margin-bottom: 0 !important }
+
+  .dropcap          { float: left; }
+  span.dropcap      { margin: 0 0.1em 0 0; line-height: 1 }
+  img.dropcap       { margin: 0 0.5em 0 0; }
+
+  /* PAGINATION */
+
+  @media screen {
+   .coverpage, .frontispiece, .titlepage, .verso, 
+   .contents, .foreword, .preface, .introduction, .dedication, .prologue,
+   .epilogue, .appendix, .glossary, .bibliography, .index, .colophon,
+   .footnotes, .plainpage
+                      { margin: 10%  0 }
+   .clearpage         { margin: 10% }
+   .cleardoublepage   { margin: 10% }
+   .vfill             { margin:  5% 10% }
+  }
+
+  @media print {
+    /* margin-top disappears after a page-break, thus padding */
+   .frontispiece, .verso, .plainpage, .section.level-2,
+   .clearpage         { page-break-before: always; padding-top: 1px }
+
+   .coverpage, .titlepage, 
+   .contents, .foreword, .preface, .introduction, .dedication, .prologue,
+   .epilogue, .appendix, .glossary, .bibliography, .index, .colophon,
+   .footnotes,
+   .cleardoublepage   { page-break-before: right; padding-top: 1px }
+
+   .vfill             { margin-top: 20% }
+   h2.title           { margin-top: 20% }
+  }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  .pageno       { position: absolute; right: 95%; font: medium sans-serif; }
+  .pageno:after { color: gray; content: '[' attr(title) ']' }
+  .toc-pageref  { float: right }
+  pre           { font-family: monospace; font-size: 0.9em; white-space: pre-wrap }
+  /*]]>*/
+  </style>
+</head>
+<body>
+  <div class="document" id="fiori-d-arancio">
+    <h1 class="document-title level-1 pfirst title">Fiori d'arancio</h1><!-- -*- encoding: utf-8 -*- -->
+    <div class="container coverpage">
+      <div class="align-center auto-scaled figure" style="margin-left: 24%; width: 51%"><img style="display: block; width: 100%" alt="images/cover.jpg" src="images/cover.jpg" width="100%" /></div>
+    </div>
+    <div class="container titlepage">
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="large">ROBERTO BRACCO</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="xx-large">TEATRO</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="large">VOLUME TERZO</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          DON PIETRO CARUSO — LA FINE DELL'AMORE —
+        </div>
+        <div class="line">
+          <strong class="bold">FIORI D'ARANCIO</strong> — TRAGEDIE DELL'ANIMA.
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="small">3ª EDIZIONE.</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          REMO SANDRON — Editore
+        </div>
+        <div class="line">
+          <span class="small">Libraio della Real Casa</span>
+        </div>
+        <div class="line">
+          <span class="small">MILANO-PALERMO-NAPOLI-GENOVA</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="small">Copyright by Roberto Bracco and Miss Dircé St. Cyr in the United States of America.</span>
+        </div>
+      </div>
+    </div>
+    <hr class="docutils" />
+    <div class="container verso">
+      <p class="center pfirst">PROPRIETÀ LETTERARIA</p>
+      <blockquote class="small">
+        <div>
+          <p class="pfirst"><em class="italics">I diritti di riproduzione e di traduzione sono riservati per tutti i paesi, non escluso il Regno di Svezia e quello di Norvegia.</em></p>
+          <p class="pnext">È assolutamente proibito di rappresentare queste produzioni senza il consenso scritto dell'Autore <em class="italics">(Art. 14 del Testo Unico 17 Settembre 1882)</em>.</p>
+          <p class="pnext">Copyright by Roberto Bracco and Miss Dircé St. Cyr in the United States of America.</p>
+          <p class="pnext">Off. Tip. Sandron — 148 — I — 290514.</p>
+        </div>
+      </blockquote>
+    </div>
+    <hr class="docutils" />
+    <div class="clearpage"></div>
+    <div class="center line-block noindent outermost">
+      <div class="line">
+        <span class="x-large">FIORI D'ARANCIO</span>
+      </div>
+      <div class="line">
+        &nbsp;
+      </div>
+      <div class="line">
+        <span class="italics large">Idillio in un atto</span>
+      </div>
+    </div>
+    <p class="pfirst">Rappresentato per la prima volta nell'<em class="italics">aprile</em> del <em class="italics">1898</em> al teatro <em class="italics">Fiorentini</em> di <em class="italics">Napoli</em>, a beneficio della Società Margherita pei Ciechi, dalla signorina <span class="small-caps">Rosina Gervasi</span>, e dai signori conte <span class="small-caps">Giuseppe Calletti</span>, <span class="small-caps">Leopoldo Persico</span> e <span class="small-caps">Felice De Luca</span>.</p>
+    <hr class="docutils" />
+    <div class="clearpage"></div>
+    <p class="pnext"><span class="invisible pageno target" title="232" id="page-232"></span> <span class="invisible pageno target" title="233" id="page-233"></span></p>
+    <p class="center large pnext">PERSONAGGI:</p>
+    <blockquote class="small">
+      <div>
+        <div class="large line-block outermost">
+          <div class="line">
+            <em class="italics">Il signor</em> <span class="small-caps">Vannucci,</span> <em class="italics">direttore della scuola.</em>
+          </div>
+          <div class="line">
+            <span class="small-caps">Nina,</span> <em class="italics">alunna.</em>
+          </div>
+          <div class="line">
+            <em class="italics">Altre undici alunne.</em>
+          </div>
+          <div class="line">
+            <span class="small-caps">Don Paolo,</span> <em class="italics">curato.</em>
+          </div>
+          <div class="line">
+            <span class="small-caps">Ferdinando.</span>
+          </div>
+          <div class="line">
+            <em class="italics">Un maestro.</em>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <hr class="docutils" />
+    <p class="pnext"><span class="invisible pageno target" title="234" id="page-234"></span> <span class="invisible pageno target" title="235" id="page-235"></span></p>
+    <div class="level-2 section" id="atto-unico">
+      <h2 class="center level-2 pfirst section-title title">ATTO UNICO</h2>
+      <p class="pfirst"><em class="italics">Lo studio del direttore, di forma irregolare. La parete di sinistra sta di sbieco, formando un angolo ottuso con la parete di fondo. Ambiente rusticano. Una scrivania innanzi a una seggiola a bracciuoli di tela cerata. Sulla scrivania, tra gli altri oggetti, un orciuolo. A un muro l'enorme orologio ufficiale della scuola: sfere e pendolo, immobili. Attaccato alla parete di destra, e precisamente alle spalle della seggiola a bracciuoli, un gran calendario illustrato e una carta geografica. In un canto della stanza, un lavamani, con su una bottiglia d'acqua. In un altro canto, una campanella con una cordicina penzolante. Una vecchia poltrona presso un tavolinetto portatile. In fondo, un uscio a due battenti, e sull'uscio i ritratti in oleografia del Re e della Regina: bruttissimi. Nella parete di sbieco, un gran balcone spalancato, dal quale si scorge la campagna.</em></p>
+      <div class="level-3 section" id="scena-i">
+        <h3 class="center level-3 pfirst section-title title with-subtitle">SCENA I.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="il-signor-vannucci-e-don-paolo-poi-il-maestro">Il signor VANNUCCI e DON PAOLO, poi il MAESTRO.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(si è appisolato sulla vecchia poltrona, con le spalle volte al signor Vannucci. Ha davanti il tavolinetto su cui sono una tazzolina vuotata e un mazzo di carte.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="236" id="page-236"></span><span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(è seduto presso la scrivania, curvo sopra un registro aperto, e scrive. Un lungo silenzio. A un tratto, si lascia scivolare con mal garbo la penna dalle dita)</em> Ih, che inchiostro! Che inchiostro! <em class="italics">(Prende l'orciuolo e versa inchiostro nel calamaio. Quindi, stringendo fra le labbra i peli più lunghi dei baffi, borbotta:)</em> Si va male. Male assai! <em class="italics">(Guardando il registro)</em> Punti scadenti in grammatica, punti scadenti in geografia, punti scadenti in condotta...: punti scadenti sempre! Fatiche buttate via con queste fanciulle benedette! L'istruzione obbligatoria?... A che pro? A che pro?... Fisime, caro don Paolo, utopie, sogni! La scuola nel villaggio! Uhm! Che sbaglio! Ignoranti vogliono restare, ignoranti! Ed è meglio!... Oh, la santa, beata e comoda ignoranza! Altro che progresso! Diceva bene il celebre Giuseppe Verdi: «Torniamo all'antico!» Già, voi siete un progressista sfegatato!... Menate vanto di seminare in campagna le idee della città e quindi non potete essere della mia opinione. Non è così? Eppure, voi, che dite di conoscere a fondo l'umanità, dovreste capirmi. <em class="italics">(Un silenzio.)</em> Don Paolo, parlo con voi. <em class="italics">(Un silenzio.)</em> <em class="italics">(Alzando la voce e chiamando:)</em> Don Paolo, don Paolo!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(svegliandosi)</em> Oh!... Sono all'ordine. <em class="italics">(Pigliando il mazzo di carte)</em> Faccio carte io.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma, don Paolo, non è l'ora della partita. Vi eravate addormentato?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="237" id="page-237"></span><span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst">Il vostro caffè è... un narcotico potentissimo!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Bravo!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma perchè non si può fare la partita?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Devo mettere in libertà le classi femminili, adesso. Sono le sette e forse più.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst">Come lo sapete? L'orologio della vostra scuola non è di quelli che camminano. Oh, no!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(alzandosi)</em> Il mio vero orologio è il sole. Vedete: l'ultimo raggio ha già lasciato il mattoncello lesionato. <em class="italics">(Indica un punto del pavimento.)</em> Nondimeno, per la scolaresca, l'orologio a cucù, che è l'orologio ufficiale, funziona perfettamente. <em class="italics">(Prende di su la scrivania una stecchetta di osso.)</em> Non cammina?... Che importa?... Introducendo questa stecchetta nelle sue viscere, io ottengo quanti ululati voglio. E nelle scuole, caro don Paolo, tutto è forza morale. State a sentire. <em class="italics">(Con la stecchetta, comincia a martoriare l'ingranaggio dell'orologio, il quale mette fuori sette suoni affannosi.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="238" id="page-238"></span><span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst">Bella, questa forza morale!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(dopo il settimo suono)</em> Ecco, sono le sette. <em class="italics">(Indi, va a tirare la cordicina della campanella, che riempie l'aria del suo strepito.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(portando le mani alle orecchie)</em> Altro saggio di forza morale!</p>
+        <p class="pnext"><em class="italics">(Si ode sùbito un rumore di panchette smosse e un gaio e fanciullesco vocìo femminile.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Il Maestro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(di dentro, con voce nasale)</em> Calma, ragazze, calma! Caspita, che fretta!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma ci scommetto che il maestro ha più fretta delle scolare. <em class="italics">(Torna a sedere presso la scrivania.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Il Maestro</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(schiudendo l'uscio del fondo e facendo comparire soltanto la testa calva con i relativi occhiali e un paio d'orecchie a ventaglio)</em> Valgo a servirla, direttore?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(quasi tra sè)</em> Se l'ho detto io che ha più fretta lui!... <em class="italics">(Al maestro)</em> Nulla di nuovo?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="239" id="page-239"></span><span class="small-caps">Il Maestro</span>
+          </div>
+        </div>
+        <p class="pfirst">Nulla, direttore. Servo suo, direttore.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">E dica, professore: hanno imparato i quattro punti cardinali?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Il Maestro</span>
+          </div>
+        </div>
+        <p class="pfirst">Non tutti e quattro, direttore. Mi sono riserbato il Nord per la volta ventura.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Ha fatto bene.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Il Maestro</span>
+          </div>
+        </div>
+        <p class="pfirst">Grazie, direttore. Servo suo, direttore.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Si conservi. E le raccomando...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Il Maestro</span>
+          </div>
+        </div>
+        <p class="pfirst">Che cosa?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Il Nord.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Il Maestro</span>
+          </div>
+        </div>
+        <p class="pfirst">Non dubiti, direttore. Servo suo, direttore. <em class="italics">(E via.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="240" id="page-240"></span><span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sbuffando e parlando tra sè:)</em> Direttore di qua, direttore di là, direttore di giù, direttore di su.... Sarà un omaggio, sarà tutto quello che si vuole; ma a me sembra una burletta! Nè più, nè meno: una burletta!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst">Fatemi grazia: perchè non vi siete ammogliato?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Come c'entra questo?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst">Voi avete tutti i difetti delle vecchie zitelle, compreso quello di brontolare dalla mattina alla sera. Se vi foste ammogliato, io non avrei per amico... un brontolone....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Mi dispiace, ma non c'è rimedio.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst">Ammogliatevi, ammogliatevi. È meglio tardi che mai. Anzi, a questo proposito, io volevo proporvi....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(interrompendo)</em> Don Paolo, vi prego.... Ho da fare il controllo della scolaresca. Vi pare il momento opportuno per prendermi in giro?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="241" id="page-241"></span><span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst">Il controllo! Oh! Oh! Che controllo?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma sì. Devono essere dodici teste e dodici «riverisco». Conto giusto.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst">E allora me ne vado. Se manca qualche testa, sto fresco. Arrivederci ...<em class="italics">direttore</em>! Ma torno più tardi per la partita, eh?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì, sì, don Paolo. Arrivederci, arrivederci.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Don Paolo</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            <span class="italics">(Esce.)</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(Si odono i battimani delle fanciulle e le lor voci confuse:)</em> Don Paolo! Don Paolo! Don Paolo!...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="italics">(Ancora battimani.)</span>
+          </div>
+        </div>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(stringendosi il capo tra le palme)</em> Ora me le mette in rivoluzione!... Che pazienza! Che pazienza! <em class="italics">(Vede schiudere un po' l'uscio di fondo.)</em> Finalmente, ci siamo!</p>
+      </div>
+      <div class="level-3 section" id="scena-ii">
+        <h3 class="center level-3 pfirst section-title title with-subtitle"><span class="invisible pageno target" title="242" id="page-242"></span>SCENA II.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="vannucci-e-le-alunne">VANNUCCI e le ALUNNE.</p>
+        <p class="pfirst"><em class="italics">(Comincia la sfilata delle scolare. Ognuna di esse sporge la testa di tra i battenti dell'uscio semiaperto, saluta e scappa.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Prima alunna</span>
+          </div>
+        </div>
+        <p class="pfirst">Riverisco, signor direttore.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tra sè)</em> E una. <em class="italics">(Poi, gridando e battendo il pugno sulla scrivania:)</em> Ho detto mille volte che a quest'ora le parole «signor direttore» sono superflue! Ma prèdico al deserto, io? <em class="italics">(Di nuovo tra sè)</em> Fra le altre cose, quel «signor direttore» mi confonde la mente, e addio controllo!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Seconda alunna</span>
+          </div>
+        </div>
+        <p class="pfirst">Riverisco, signor dir....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Zitta! E due.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Terza alunna</span>
+          </div>
+        </div>
+        <p class="pfirst">Riverisco, signor....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="243" id="page-243"></span><span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Zitta! E tre.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Quarta alunna</span>
+          </div>
+        </div>
+        <p class="pfirst">Riverisco....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Proprio così! E quattro.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Quinta alunna</span>
+          </div>
+        </div>
+        <p class="pfirst">Riverisco.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Benissimo! E cinque.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Sesta alunna</span>
+          </div>
+        </div>
+        <p class="pfirst">Riverisco.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">E sei.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Settima alunna</span>
+          </div>
+        </div>
+        <p class="pfirst">Riverisco, signor direttore.... Uh! Non l'ho fatto apposta....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">E sette.... <em class="italics">(Arrabbiandosi)</em> E sette sono i peccati mortali!...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="244" id="page-244"></span><span class="small-caps">Ottava alunna</span>
+          </div>
+        </div>
+        <p class="pfirst">Riverisco... e niente più.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(come sopra)</em> Brava la sciocca! E otto.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nona alunna</span>
+          </div>
+        </div>
+        <p class="pfirst">Riveri... schi.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(correggendo)</em> sco... sco.... E nove.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Decima alunna</span>
+          </div>
+        </div>
+        <p class="pfirst">Riveris.... Riverì....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">... sco! sco! sco!... E dieci.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Undicesima alunna</span>
+          </div>
+        </div>
+        <p class="pfirst">Riveri... scò... scò... scò!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(irritatissimo)</em> Scoppio! scoppio! scoppio! E undici. <em class="italics">(Dopo una lunga pausa)</em> E undici.... <em class="italics">(Impensierito)</em> Undici!... Una di meno! Dove diamine s'è cacciata la dodicesima?... Ah! Eccola... <em class="italics">(Meravigliato)</em> Entra... O perchè mai entra?...</p>
+      </div>
+      <div class="level-3 section" id="scena-iii">
+        <h3 class="center level-3 pfirst section-title title with-subtitle"><span class="invisible pageno target" title="245" id="page-245"></span>SCENA III.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="vannucci-e-nina">VANNUCCI e NINA.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(portando la borsa dei libri sotto il braccio destro, si avanza titubante, con gli occhietti lucidi, che guardano in mille punti in un momento solo.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Che c'è, Nina? Che c'è?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tenta di sorridere, ma non fa che mostrare i suoi dentini bianchi, e sotto l'ascella stringe la borsa dei libri, quasi temendo che le cada.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma che c'è, dunque, Nina?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst">Nulla.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(brusco)</em> E allora buona notte! Non vedete che sono occupato? Potevate riverirmi com'era vostro dovere ed andar via con le vostre compagne. <em class="italics">(Pausa. Poi, gentilmente)</em> Venite qua, Nina: vi ho rimproverata, ma ho bisogno di scusarvi io medesimo ai miei occhi e di giustificare la vostra venuta in <span class="invisible pageno target" title="246" id="page-246"></span>questa stanza. Via, avvicinatevi.... Non fate la cattiva.... Il vostro direttore, lo sapete, vi vuol bene come a una figlia.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(inquieta e riluttante, si pesta con l'uno l'altro piedino. Ma, a un tratto, si fa coraggio.)</em> Signor direttore....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Dite....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con una cantilena come di parole imparate a mente)</em> Io vengo a ringraziarvi di tutte le cure che avete spese per me. La mamma verrà a fare lo stesso... domani.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con l'animo sospeso, si fa triste in viso e la guarda di sottecchi.)</em> Spiegatevi, Nina. Non ho capito....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst">Ecco, signor direttore, io... oggi....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">... oggi?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="247" id="page-247"></span><span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(lasciando scorgere il suo ingenuo compiacimento)</em> Compisco sedici anni.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(simulando indifferenza)</em> Ah ah! Sicuro! Sedici anni! Eh, infatti, siete diventata alta quasi come una donna e avete allungata la veste fino ai piedi.... <em class="italics">(La contempla con un misto di curiosità, di compiacenza e di sordo dispetto.)</em> Me ne accorgo adesso. <em class="italics">(Indi, guarda altrove. Tace. Ha un fastidio invincibile. Sbuffa. Brontola:)</em> A quest'ora, sale dai giardini una fragranza di fiori d'arancio così acuta che dà alla testa!... Auff!...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst">Volete che chiuda le invetriate?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">No, no, non chiudete.... Mi piace di vedere il tramonto.</p>
+        <p class="pnext"><em class="italics">(Nel lontano orizzonte, incorniciato dal balcone aperto, un lembo di cielo rosseggia.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(è lì, immobile, coi piedini serrati e incollati al suolo.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="248" id="page-248"></span><span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(scattando)</em> Sedici anni! E perciò credete di poter dare un calcio alla scuola! Siete donna, non è vero? Siete donna? Il maestro tien compagnia alla bambola! A sedici anni, siete una dottora! A sedici anni i libri si chiudono e la veste si allunga; allo studio si sostituiscono le passeggiate, i nastri, i ghiribizzi, e al direttore si sostituisce.... Dio sa che cosa!... Basta! Basta! Basta!... Mi saluti. Se ne vada. Subito però... e non se ne parli più!..</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(torcendo il collo per non farsi guardare, trattiene le lagrime.)</em> Non è colpa mia se me ne vado,... e non è colpa di nessuno. Ho sedici anni, ecco; e l'articolo ottavo parla chiaro.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(trasalendo)</em> L'articolo ottavo?!...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(ripete ad alta voce, cadenzatamente, il testo dell'articolo:)</em> «Non sono ammesse le fanciulle che abbiano meno di sette anni e più di quindici. E l'alunna che avrà raggiunta l'età di sedici anni, anche nel corso dell'anno scolastico, sarà obbligata a lasciare la scuola....» Eh!... Questo è l'articolo ottavo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="249" id="page-249"></span><span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Lo ricordate a memoria, lo ricordate?!... Non c'è che dire! Dovete andarvene. Sono parole che scrissi proprio io quando fondai la scuola in questo villaggio. <em class="italics">(Sospirando)</em> Avevo appena trent'anni ed erano neri i miei capelli.... Ora ne ho quaranta suonati.... Questi dieci anni se li è rubati il tempo! <em class="italics">(Pausa.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(lo ha ascoltato senza capire, ed ora è intenta a cacciarsi il dito mignolo della sinistra fra le umide labbra porporine.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(in tono di acerbo rimprovero, gridando e aggrottando le sopracciglia)</em> Che fate lì?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tutta spaurita)</em> Sa... signor direttore... mi pulivo il dito. Veda... è macchiato d'inchiostro. <em class="italics">(E, stendendo il braccio, mostra il dito macchiato.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con ira eccessiva)</em> Ma ci vuol tutta la sua faccia tosta per venirmi a contare di simili ragioni. Gliel'ho ripetuto fino alla nausea, cocciuta d'una ragazza, che mettere le mani in bocca è ciò che vi ha di più ristucchevole e di più indecente. Ma tutto fiato sprecato! Le mie parole le entrano in un orecchio e se n'escono dall'altro! Si ha un bell'affacchinarsi <span class="invisible pageno target" title="250" id="page-250"></span>da che fa giorno a che fa notte! Ecco, ecco quel che se ne ha in compenso: malecreanze, mali modi e ingratitudine. Gli è già un pezzo che lei, signorina mia, si è guastata. Guardi, guardi, guardi qui gli ultimi suoi rapporti, e mi dica un po' lei stessa se non c'è da inorridire. <em class="italics">(Consultando nervosamente il registro)</em> Cinque in geografia... tre in calligrafia... quattro in grammatica... zero in condotta! E per giunta? Per giunta: «ho sedici anni.» Vuole che gliela dica come la sento? Vuole che glielo faccia in tre parole il suo ritratto?... Cervellina, ignorante e ingrata. Sì, ingrata!... Ingrata!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(vorrebbe parlare e non può: la parola le si strozza in gola)</em> Signor... diret...tore, signor... di...rettore.... <em class="italics">(Scoppia in un pianto dirotto.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="italics">(Un silenzio.)</span>
+          </div>
+        </div>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(mortificato, si accosta a Nina, le solleva la fronte con le mani tremanti, le asciuga le lagrime col suo fazzoletto, le carezza leggermente i capelli, e le mormora all'orecchio:)</em> Ho torto io, Nina, ho torto io..., ma... te ne prego... non mi lasciare!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(abbassa lo sguardo e, presa da un lieve tremito di paura vaga, che le fa cadere di sotto l'ascella la borsa dei libri, si scosta da lui.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="251" id="page-251"></span><span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(osserva tutto ciò con profonda tristezza.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="italics">(L'aria si è fatta buia.)</span>
+          </div>
+        </div>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(inquieto, stranamente emozionato, va al balcone, e resta lì come estatico, mormorando:)</em> Oh, questa fragranza!... Questa fragranza di fiori d'arancio...!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sempre tremando, si guarda intorno, e fugge via.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(ritornando nella stanza, cerca Nina nella penombra:)</em> Nina!... Nina!... Dove sei, Nina? <em class="italics">(Pausa.)</em> Fuggita! <em class="italics">(Va di nuovo al balcone e la scorge che dilegua.)</em> Come corre!... S'allontana.... Non si vede più. <em class="italics">(Chiude le invetriate e gli scuri del balcone; accende un lume; raccoglie da terra la borsa e i libri di Nina, e li pone accuratamente su la scrivania. Siede al suo posto. Scrolla il capo. Si passa una mano sulla fronte. Indi, prende una penna e guardando il registro ricomincia a borbottare:)</em> Eh,... si va male!... Male assai!</p>
+      </div>
+      <div class="level-3 section" id="scena-iv">
+        <h3 class="center level-3 pfirst section-title title with-subtitle"><span class="invisible pageno target" title="252" id="page-252"></span>SCENA IV.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="vannucci-ferdinando-e-nina">VANNUCCI, FERDINANDO e NINA.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Ferdinando</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(di fuori, chiamando in tono d'allarme:)</em> Signor Vannucci! Signor Vannucci!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Ohè, chi mi chiama con tanta furia? <em class="italics">(Si alza.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Ferdinando</span>
+          </div>
+        </div>
+        <p class="pfirst">Signor Vannucci! Presto presto, aprite, chè la Nina è svenuta!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Oh, diavolo!... <em class="italics">(Esce in fretta dal fondo, gridando:)</em> Nina? Nina? Nina?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="italics">(Un silenzio.)</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(Entrano il signor Vannucci e Ferdinando, che, insieme, portano Nina svenuta.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Là, là, su quella poltrona.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Ferdinando</span>
+          </div>
+        </div>
+        <p class="pfirst">È viva per miracolo!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="253" id="page-253"></span><span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(adagiando Nina sulla vecchia poltrona)</em> Ma che è accaduto? Che è accaduto? Mi si fa il favore di dirmi quello che è accaduto?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Ferdinando</span>
+          </div>
+        </div>
+        <p class="pfirst">Il fosso, signor Vannucci, il fosso!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Il fosso?!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Ferdinando</span>
+          </div>
+        </div>
+        <p class="pfirst">Un po' d'acqua, intanto.... Un poco d'acqua dov'è?... Ecco. <em class="italics">(Sta per prendere l'orciuolo di su la scrivania.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">No. Che fate? Questo è inchiostro!...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Ferdinando</span>
+          </div>
+        </div>
+        <p class="pfirst">E che Dio vi benedica! Avete l'inchiostro negli orciuoli?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">L'acqua è lì, nella bottiglia....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Ferdinando</span>
+          </div>
+        </div>
+        <p class="pfirst">Ah! <em class="italics">(La prende.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="254" id="page-254"></span><span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Nina? Nina? Ninuccia bella? Non senti la mia voce?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Ferdinando</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con in mano la bottiglia, spruzzando l'acqua sul viso e sulla veste di Nina)</em> Sss! State zitto. Lasciate fare a me.... <em class="italics">(Continua a spruzzare acqua)</em> Lo vedete? Lo vedete come rinviene?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">È vero, è vero!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con un fil di voce)</em> Dove... dove sono capitata?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">In casa mia, Nina. In casa del vostro direttore.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con un lieve moto di panico)</em> Oh!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Ferdinando</span>
+          </div>
+        </div>
+        <p class="pfirst">Sss.... State zitto! È ancora tutta spaurita.... Figuratevi! Appena uscita dalla scuola, aveva presa tale una rincorsa che pareva una pazza, pareva. E fuggiva, fuggiva, fuggiva... come se fosse stata inseguita da un cane rabbioso. Era buio, capite, <span class="invisible pageno target" title="255" id="page-255"></span>perchè il sindaco non ne ha figlie da mandare a scuola, e i fanali qui non ce li mette mica; ed è per questo che, alla svoltata del viottolo, la poveretta inciampa, barcolla, e dando un grido, <em class="italics">patapúnfete</em>, giù!...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Misericordia!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Ferdinando</span>
+          </div>
+        </div>
+        <p class="pfirst">Fortuna, però, che nel fosso ci ero già io!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">C'eri già tu?!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Ferdinando</span>
+          </div>
+        </div>
+        <p class="pfirst">L'ho potuta afferrare prima che toccasse il terreno, signor Vannucci, prima che toccasse il terreno...! E siccome le mie braccia sono di ferro, ella è restata, così, in aria, come una colomba con le ali aperte. <em class="italics">(A Nina)</em> Neanche indolenzita, n'è vero, Nina? Neanche indolenzita?...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(alzandosi e parlando con soavità, senza raccapezzarsi)</em> Oh no! Niente niente.... Mi sembra soltanto d'aver sognato.... E non capisco perchè, ma certo non mi dispiacerebbe di rifare il medesimo sogno....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="256" id="page-256"></span><span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Ah! Non vi dispiacerebbe?... <em class="italics">(Dopo un breve silenzio, non riuscendo a dissimulare la sua preoccupazione, si rivolge con ansia sospettosa a Ferdinando)</em> E tu, come ti ci trovavi in quel fosso?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Ferdinando</span>
+          </div>
+        </div>
+        <p class="pfirst">Io... mi ci trovavo... di passaggio.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma che passaggio! Che passaggio!... <em class="italics">(Adirandosi)</em> Quel fosso ha la forma d'un imbuto. Bisogna discenderci a bella posta, santodio! E per fare ciò non si può avere che un solo scopo: quello di nascondersi. Sicuro! Di nascondersi come un ladro!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Ferdinando</span>
+          </div>
+        </div>
+        <p class="pfirst">Signor Vannucci!...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Nina, Nina, per amor del cielo, ditemela voi la verità. Ditemela voi. Come si trovava laggiù questo galantuomo?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst">Signor direttore, io non lo so....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">La verità, Nina! La verità! La verità!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="257" id="page-257"></span><span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con pudica reticenza)</em> La verità è ch'egli....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(quasi con terrore)</em> Ti aspettava?!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(ha un impercettibile sorriso, e, arrossendo, si copre il volto con un braccio)</em> Sì, mi aspettava!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sentendosi soffocare da una dolorosa commozione)</em> Dio! Dio! Che enormità! Che corruzione! Che rovina! E che si dirà di me nel paese? Che si dirà di me? È naturale: si dirà che questo insegno io alle ragazze, si dirà che io le educo a fare all'amore, che io le spingo a camminare su gli orli dei precipizi!... Dio mio! Sono perduto! Sono perduto!...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma no, signor direttore, non vi disperate così.... Ferdinando mi aspettava innocentemente....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(incalzando)</em> Parla, parla....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì, innocentemente. Mi aspettava... per dirmi qualche paroletta... senza mostrarsi alle mie compagne... <span class="invisible pageno target" title="258" id="page-258"></span>senza mostrarsi a nessuno.... Aveva soltanto, un po', la testa fuori del fosso.... E laggiù non lo scorgevo che io, io sola, perchè... io distinguo il colore dei suoi capelli anche all'oscuro.... Che male c'è?... Ci conosciamo da diciassette anni.... È vero che io non ne ho che sedici... ma lui — dice la mamma — veniva già in casa un anno prima che io nascessi. È il figliuolo di compare Antonio — lo sapete —, quello che ha la vigna accanto all'orto della mamma. Ma la mamma dice ch'egli non ci deve mettere più piede in casa, ed ecco che, così, da un momento all'altro, lo ha scacciato....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Ah? Lo ha scacciato?!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst">Lo ha scacciato, sì, perchè le galline — dice la mamma — le galline lo hanno in antipatia, e, quando lo vedono, si guastano il sangue e fanno le ova acide. Eh!... Lo dice lei; ma io non me ne sono accorta. E allora il poverino — dico io — che deve fare? Lui mi dice: così non si può vivere. Io gli dico: allora, aspettami nel fosso. Lui mi dice: e sì, t'aspetterò. E allora, passando, gli dico: buona notte, buona notte, Ferdinando! E lui... lui mi dice: ti voglio bene, Nina, ti voglio tanto bene!... Ieri <em class="italics">(assai dolce)</em> me lo disse due volte.... Oggi — vedete... vi racconto tutto — oggi <em class="italics">(con qualche lagrimuccia)</em> non me lo ha detto ancora.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="259" id="page-259"></span><span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(dopo un silenzio, si accosta con severità esagerata e cupa a Ferdinando, che è rimasto lì un poco imbarazzato e intenerito)</em> Lo intendi, tu, quello che fai?!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Ferdinando</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(semplicemente)</em> Sissignore.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(in tono truce)</em> Tu commetti un'infamia!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Ferdinando</span>
+          </div>
+        </div>
+        <p class="pfirst">Mi meraviglio, signor Vannucci! O che non prese forse moglie il mio babbo? Ebbene, me ne voglio prendere una anch'io.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst">Ha ragione!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(a Nina, gridando aspramente)</em> A posto, voi!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Ferdinando</span>
+          </div>
+        </div>
+        <p class="pfirst">E anzi, se foste un direttore coi fiocchi, uno di quelli buoni, ci andreste voi a parlare col babbo mio e con la mamma di Nina.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="260" id="page-260"></span><span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma come?! È ufficio d'un direttore di scuola, questo?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con umiltà)</em> In fin dei conti, signor direttore, io ho compiuti gli studi. Non dovreste darmi un diploma? E invece mi date un marito.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(montando in furia)</em> E vi pare che sia lo stesso, vi pare!?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst">No. Proprio lo stesso, no. Ma gli è che voi siete così buono con me. Anche quando mi sgridate, sento che siete buono. Anche quando mi fate piangere, sento che siete il mio protettore. Non mi abbandonate adesso che ho più bisogno della vostra protezione.... Tanto, alla scuola io non ci posso più venire.... E giacchè mi toccherebbe di stare tutta la giornata in ozio, non è forse meglio maritarmi?... Don Paolo, il confessore, mi ha detto che il maritarsi non è peccato e che le ragazze sono ragazze appunto per cercare marito.... Parlate, dunque, parlate voi con la mamma.... Ditele tante cose.... Ditele che mi sono condotta bene... e che ho meritato questo premio.... Diteglielo con la vostra voce dolce, con la vostra voce migliore, e lei vi crederà... vi crederà... perchè quando parlate con quella voce <em class="italics">(gentilissimamente)</em> non c'è nessuno che non creda in voi come in un santo!...</p>
+      </div>
+      <div class="level-3 section" id="scena-v">
+        <h3 class="center level-3 pfirst section-title title with-subtitle"><span class="invisible pageno target" title="261" id="page-261"></span>SCENA V.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="don-paolo-e-gli-altri">DON PAOLO e gli ALTRI.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(fermandosi sulla soglia della porta in fondo)</em> Piano, piano, piccina mia. Non confondere il signor direttore coi santi. Lui, è un altro genere!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(voltandosi con rabbioso rancore)</em> Ah, don Paolo, siete voi che mettete i mariti nel cervello delle fanciulle?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst">Io non ce li metto, mio caro: io ce li trovo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(esasperandosi)</em> A quell'età, è una cosa orribile!... Orribile!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst">Non esageriamo. <em class="italics">(Con serenità sacerdotale)</em> Quando il terreno è propizio e l'aria è pura, si può anticipare la seminagione.</p>
+        <p class="pnext"><em class="italics">(Nina e Ferdinando si avvicinano al signor Vannucci, l'una da un lato, l'altro dall'altro, supplichevoli e insistenti.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="262" id="page-262"></span><span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst">Signor Direttore....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Ferdinando</span>
+          </div>
+        </div>
+        <p class="pfirst">Signor Vannucci....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst">Accompagnate Ferdinando e me dalla mamma.... È così tardi.... Ella sarà in pena.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Ferdinando</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì, sì, non perdiamo più tempo....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst">Proteggeteci....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Ferdinando</span>
+          </div>
+        </div>
+        <p class="pfirst">Aiutateci....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst">Animo, direttore, animo!...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(scattando con un accento di strazio)</em> Anche voi, Don Paolo, anche voi contro di me?! Ma è inutile! Io non mi lascio imporre da nessuno, perdinci!, e <span class="invisible pageno target" title="263" id="page-263"></span>non sarò mai il complice d'una mostruosità! Mai! Mai!... E poi, per quale ragione dovrei aiutarli? Perchè sono buono? E chi lo dice che sono buono? Lo pensa lei <em class="italics">(indicando Nina)</em> e s'intende che lo pensi visto che lei è una piccola egoista a cui fa comodo di pensarlo. Ma non sono buono io, no che non lo sono, e non è possibile d'esser buoni quando si vive come io vivo, senza il ricordo d'un sorriso..., senza la speranza d'un sorriso! <em class="italics">(In una crescente esasperazione di malinconia)</em> Coltivo un giardino che non è mio e che è di tutti gli altri, e, per questi fiori che vedo sbocciarmi dinanzi belli e rigogliosi, io sono un estraneo... un estraneo; e alla mia mano che vorrebbe difenderli perfino dalla rugiada troppo fredda o dal raggio di sole troppo ardente, essi preferiscono quella che li strappa senza pietà e che li porta ad appassire... chi sa dove!... Non sono buono io, no, non lo sono, e non voglio esserlo, non voglio esserlo!... Don Paolo, non mi cacciate in codesta faccenda, e non mi fate predicozzi, chè, tanto, non mi convincereste. Questi ragazzi mi hanno dato un dolore, un gran dolore; e, adesso, che se la sbrighino tra loro e mi lascino in pace. <em class="italics">(Siede sulla vecchia poltrona presso il tavolino, e non sa dissimulare la sua sofferenza.)</em> Ciascuno per sè e Dio per tutti; e se c'è qualcuno che vuol morire d'amore, muoia, muoia pure, e buon viaggio! Io me ne lavo le mani!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="italics">(Un silenzio.)</span>
+          </div>
+        </div>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(gli si avvicina e, guardingo, insinuante, semplice, solenne, gli parla all'orecchio:)</em> Signor Vannucci... <span class="invisible pageno target" title="264" id="page-264"></span>siete sicuro... di non essere voi innamorato di quella fanciulla?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(levandosi come per una violenta scossa elettrica e spalancando gli occhi in un misto di stupore e di raccapriccio)</em> Io! <em class="italics">(Poi acuisce il pensiero, impallidisce, abbassa gli occhi e dice a Don Paolo, con voce fioca e penosa:)</em> Don Paolo, voi siete stato crudele,... ma io vi sono riconoscente!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(si stringe nelle spalle in segno di bonaria indulgenza sacerdotale e si scosta da lui, andando verso Ferdinando e Nina.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(facendo uno sforzo)</em> Sentite, Nina.... Ho riflettuto al vostro desiderio.... <em class="italics">(Con molta dolcezza)</em> È giusto, sì.... Mi occuperò io di ogni cosa.... Sarete contenta.... Fidate in me.... Ne riparleremo domani.... Per ora, abbiate pazienza.... Ho un po' d'emicrania.... Ma, domani, sarà passata... sarà passata.... <em class="italics">(Torna a sedere sulla vecchia poltrona e piega il capo in una mano, poggiando il gomito sul tavolino.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(piano, a Don Paolo)</em> Don Paolo....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(piano come lei)</em> Cos'è?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="265" id="page-265"></span><span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(commossa)</em> Gli ho forse fatto del male?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst">Un poco.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst">Devo chiedergli perdono?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Don Paolo</span>
+          </div>
+        </div>
+        <p class="pfirst">E perchè no? Sarà un beneficio per lui e anche per te. Va... va....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(incoraggiata dallo sguardo di Don Paolo, ma pur timidamente, si accosta al signor Vannucci e gli s'inginocchia ai piedi.)</em> Vi chiedo perdono, signor direttore.... Io non so che male vi ho fatto, ma vi vedo soffrire, vi vedo molto soffrire... e capisco che ne sono io la causa. <em class="italics">(Con grande tenerezza)</em> Perdonatemi, signor direttore, perdonatemi....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(evitando di guardarla)</em> No, Nina, voi non mi avete fatto niente.... Che significa ciò? <em class="italics">(Stendendo il braccio per sollevarla)</em> Su, su.... Alzatevi, alzatevi, vi prego di alzarvi!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="266" id="page-266"></span><span class="small-caps">Ferdinando</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con l'aria d'aver capito, presso la porta in fondo)</em> Andiamo via, Nina!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì, mi alzerò; ma permettetemi almeno, permettetemi di baciarvi questa mano. <em class="italics">(Glie la prende con effusione.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Vannucci</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(ritraendola bruscamente, come per una gran paura indefinibile)</em> No, no, no!... <em class="italics">(Indi, mutando il tono di paura in un tono di contenuta affettuosità)</em> No, Nina, non ce n'è bisogno.... Grazie... grazie.... <em class="italics">(A un tratto, le lagrime gli sgorgano dagli occhi copiosamente; ed egli si affretta ad incrociare le braccia sul tavolino e a nascondervi il viso, singhiozzando in silenzio.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Nina</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(lo guarda attonita e lentamente si alza. Poi guarda attonita Don Paolo. Poi, di nuovo, con gli occhi fissi sul signor Vannucci, retrocedendo verso Ferdinando che l'aspetta inquieto e che tuttora col gesto le consiglia di andar via, mormora quasi tra sè:)</em> Come è strano!... <em class="italics">(Pausa.)</em> Come è strano!...</p>
+        <div class="vspace" style="height: 2em"></div>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="large">SIPARIO.</span>
+          </div>
+        </div>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fine dell'idillio.</span>
+          </div>
+        </div>
+        <div class="vspace" style="height: 5em"></div>
+        <div class="backmatter"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
